@@ -21,6 +21,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0",
     "sass": "^1.54.0"
   }
 }
