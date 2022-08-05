@@ -11,11 +11,11 @@ export class MainView extends React.Component {
           _id: 1,
           Title: "Inception",
           Description:
-            "Forrest Gump, an innocent and kind-hearted Alabama boy, has been dealing with other peoples unkindness nearly all his life. Having grown up with beautiful Jenny, his only friend, Forrest yearns to learn all about the ways of the world and embarks on a mission to find his true purpose in life.",
-          Genre: "Drama",
-          Director: "Robert Zemeckis",
+            "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+          Genre: "Science fiction action film",
+          Director: "Christopher Nolan",
           ImagePath:
-            "https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/?ref_=tt_ov_i",
+            "https://m.media-amazon.com/images/M/MV5BMTQ3NTU4MjA2Ml5BMl5BanBnXkFtZTcwNjQ0OTk1Mw@@._V1_UY100_CR25,0,100,100_AL_.jpg",
         },
         {
           _id: 2,
@@ -25,7 +25,7 @@ export class MainView extends React.Component {
           Genre: "Drama",
           Director: "Frank Darabont",
           ImagePath:
-            "https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/?ref_=tt_ov_i",
+            "https://m.media-amazon.com/images/M/MV5BMTc3NjM4MTY3MV5BMl5BanBnXkFtZTcwODk4Mzg3OA@@._V1_UX100_CR0,0,100,100_AL_.jpg",
         },
         {
           _id: 3,
@@ -35,7 +35,7 @@ export class MainView extends React.Component {
           Genre: "Action",
           Director: "Ridley Scott",
           ImagePath:
-            "https://www.imdb.com/title/tt0172495/mediaviewer/rm2442542592/?ref_=tt_ov_i",
+            "https://m.media-amazon.com/images/M/MV5BMTM1NTA3MTkwOF5BMl5BanBnXkFtZTcwOTQ0NjcxNA@@._V1_UX100_CR0,0,100,100_AL_.jpg",
         },
       ],
       selectedMovie: null,
@@ -51,7 +51,7 @@ export class MainView extends React.Component {
   render() {
     const { movies, selectedMovie } = this.state;
 
-    if (selectedMovie) return <MovieView movie={selectedMovie} />;
+    // if (selectedMovie) return <MovieView movie={selectedMovie} />;
 
     if (movies.length === 0)
       return <div className="main-view">The list is empty!</div>;

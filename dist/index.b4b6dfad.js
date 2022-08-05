@@ -2906,12 +2906,11 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _mainView = require("./components/main-view");
-var _mainViewDefault = parcelHelpers.interopDefault(_mainView);
 var _indexScss = require("./index.scss");
 // Main component (will eventually use all the others)
 class MyFlixApplication extends (0, _reactDefault.default).Component {
     render() {
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainViewDefault.default), {}, void 0, false, {
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _mainView.MainView), {}, void 0, false, {
             fileName: "src/index.jsx",
             lineNumber: 10,
             columnNumber: 12
@@ -27219,36 +27218,7 @@ $parcel$ReactRefreshHelpers$4f22.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MainView", ()=>MainView) //   render() {
- //     const { movies, selectedMovie } = this.state;
- //     if (selectedMovie) return <MovieView movie={selectedMovie} />;
- //     if (movies.length === 0)
- //       return <div className="main-view">The list is empty!</div>;
- //     return (
- //       <div className="main-view">
- //         {selectedMovie ? (
- //           <MovieView
- //             movie={selectedMovie}
- //             onBackClick={(newSelectedMovie) => {
- //               this.setSelectedMovie(newSelectedMovie);
- //             }}
- //           />
- //         ) : (
- //           movies.map((movie) => (
- //             <MovieCard
- //               key={movie._id}
- //               movie={movie}
- //               onMovieClick={(movie) => {
- //                 this.setSelectedMovie(movie);
- //               }}
- //             />
- //           ))
- //         )}
- //       </div>
- //     );
- //   }
- // }
-;
+parcelHelpers.export(exports, "MainView", ()=>MainView);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
@@ -27262,10 +27232,10 @@ class MainView extends (0, _reactDefault.default).Component {
                 {
                     _id: 1,
                     Title: "Inception",
-                    Description: "Forrest Gump, an innocent and kind-hearted Alabama boy, has been dealing with other peoples unkindness nearly all his life. Having grown up with beautiful Jenny, his only friend, Forrest yearns to learn all about the ways of the world and embarks on a mission to find his true purpose in life.",
-                    Genre: "Drama",
-                    Director: "Robert Zemeckis",
-                    ImagePath: "https://www.imdb.com/title/tt0109830/mediaviewer/rm1954748672/?ref_=tt_ov_i"
+                    Description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+                    Genre: "Science fiction action film",
+                    Director: "Christopher Nolan",
+                    ImagePath: "https://m.media-amazon.com/images/M/MV5BMTQ3NTU4MjA2Ml5BMl5BanBnXkFtZTcwNjQ0OTk1Mw@@._V1_UY100_CR25,0,100,100_AL_.jpg"
                 },
                 {
                     _id: 2,
@@ -27273,7 +27243,7 @@ class MainView extends (0, _reactDefault.default).Component {
                     Description: "It tells the story of banker, who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence.",
                     Genre: "Drama",
                     Director: "Frank Darabont",
-                    ImagePath: "https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/?ref_=tt_ov_i"
+                    ImagePath: "https://m.media-amazon.com/images/M/MV5BMTc3NjM4MTY3MV5BMl5BanBnXkFtZTcwODk4Mzg3OA@@._V1_UX100_CR0,0,100,100_AL_.jpg"
                 },
                 {
                     _id: 3,
@@ -27281,7 +27251,7 @@ class MainView extends (0, _reactDefault.default).Component {
                     Description: "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
                     Genre: "Action",
                     Director: "Ridley Scott",
-                    ImagePath: "https://www.imdb.com/title/tt0172495/mediaviewer/rm2442542592/?ref_=tt_ov_i"
+                    ImagePath: "https://m.media-amazon.com/images/M/MV5BMTM1NTA3MTkwOF5BMl5BanBnXkFtZTcwOTQ0NjcxNA@@._V1_UX100_CR0,0,100,100_AL_.jpg"
                 }, 
             ],
             selectedMovie: null
@@ -27294,41 +27264,39 @@ class MainView extends (0, _reactDefault.default).Component {
     }
     render() {
         const { movies , selectedMovie  } = this.state;
-        if (selectedMovie) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
-            movie: selectedMovie,
-            onBackClick: (newSelectedMovie)=>{
-                this.setSelectedMovie(newSelectedMovie);
-            }
-        }, void 0, false, {
-            fileName: "src/components/main-view.jsx",
-            lineNumber: 55,
-            columnNumber: 9
-        }, this);
+        // if (selectedMovie) return <MovieView movie={selectedMovie} />;
         if (movies.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "main-view",
             children: "The list is empty!"
         }, void 0, false, {
             fileName: "src/components/main-view.jsx",
-            lineNumber: 64,
+            lineNumber: 57,
             columnNumber: 14
         }, this);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "main-view",
-            children: movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
+            children: selectedMovie ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieView.MovieView), {
+                movie: selectedMovie,
+                onBackClick: (newSelectedMovie)=>{
+                    this.setSelectedMovie(newSelectedMovie);
+                }
+            }, void 0, false, {
+                fileName: "src/components/main-view.jsx",
+                lineNumber: 62,
+                columnNumber: 11
+            }, this) : movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                     movie: movie,
-                    onMovieClick: (newSelectedMovie)=>{
-                        this.setState({
-                            selectedMovie: newSelectedMovie
-                        });
+                    onMovieClick: (movie)=>{
+                        this.setSelectedMovie(movie);
                     }
                 }, movie._id, false, {
                     fileName: "src/components/main-view.jsx",
-                    lineNumber: 69,
-                    columnNumber: 11
+                    lineNumber: 70,
+                    columnNumber: 13
                 }, this))
         }, void 0, false, {
             fileName: "src/components/main-view.jsx",
-            lineNumber: 67,
+            lineNumber: 60,
             columnNumber: 7
         }, this);
     }
