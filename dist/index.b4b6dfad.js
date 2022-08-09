@@ -27255,7 +27255,7 @@ class MainView extends (0, _reactDefault.default).Component {
             className: "main-view"
         }, void 0, false, {
             fileName: "src/components/main-view.jsx",
-            lineNumber: 70,
+            lineNumber: 39,
             columnNumber: 37
         }, this);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27267,7 +27267,7 @@ class MainView extends (0, _reactDefault.default).Component {
                 }
             }, void 0, false, {
                 fileName: "src/components/main-view.jsx",
-                lineNumber: 75,
+                lineNumber: 44,
                 columnNumber: 11
             }, this) : movies.map((movie)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _movieCard.MovieCard), {
                     movie: movie,
@@ -27276,12 +27276,12 @@ class MainView extends (0, _reactDefault.default).Component {
                     }
                 }, movie._id, false, {
                     fileName: "src/components/main-view.jsx",
-                    lineNumber: 83,
+                    lineNumber: 52,
                     columnNumber: 13
                 }, this))
         }, void 0, false, {
             fileName: "src/components/main-view.jsx",
-            lineNumber: 73,
+            lineNumber: 42,
             columnNumber: 7
         }, this);
     }
