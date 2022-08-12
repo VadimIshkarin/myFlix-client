@@ -1,5 +1,25 @@
-.my-flix {
-  color: #4682b4;
+html {
+  background-color: #f8f7f7;
+  font-size: 1.3rem;
 }
+
+.app-container {
+  color: #101311;
+  background-color: #fff;
+}
+
+.btn.btn-primary {
+  background-color: #04837b;
+}
+
+
+
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=index.ce1d6491.css.map */

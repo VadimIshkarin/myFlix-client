@@ -50,7 +50,7 @@ export class MovieView extends React.Component {
           }}
         >
           Back
-        </Button>
+          {/* </Button>
         <Button
           className="button ml-2"
           onClick={() => {
@@ -65,7 +65,7 @@ export class MovieView extends React.Component {
             this.delFavMovie(movie, user);
           }}
         >
-          Remove from favorites
+          Remove from favorites */}
         </Button>
       </Container>
     );
