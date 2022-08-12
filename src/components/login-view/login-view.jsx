@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Form, Button } from "react-bootstrap";
+
+import "./login-view.scss";
 
 export function LoginView(props) {
   const [username, setUsername] = useState("");
@@ -8,31 +11,40 @@ export function LoginView(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(username, password);
+    // Send a request to the server for authentication, then call props.onLoggedIn(username)
     props.onLoggedIn(username);
   };
 
   return (
-    <form>
-      <label>
-        Username:
-        <input
+    <Form>
+      <h2 className="mb-3 mx-auto mt-5">Login to MyFlixDB</h2>
+      <Form.Group className="mb-3 mx-auto mt-4" controlId="formUsername">
+        <Form.Label>Username:</Form.Label>
+        <Form.Control
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
+          placeholder="Enter a username"
         />
-      </label>
-      <label>
-        Password:
-        <input
+      </Form.Group>
+
+      <Form.Group className="mb-3 mx-auto mt-4">
+        <Form.Label>Password:</Form.Label>
+        <Form.Control
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
+          minLength="8"
+          placeholder=""
         />
-      </label>
-      <button type="submit" onClick={handleSubmit}>
+      </Form.Group>
+
+      <Button className="mt-4" type="submit" onClick={handleSubmit}>
         Submit
-      </button>
-    </form>
+      </Button>
+    </Form>
   );
 }
 
