@@ -1,0 +1,22 @@
+.card-body {
+  figure {
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: auto;
+    width: 100%;
+    img {
+      display: block;
+      height: 400px;
+      margin: auto;
+    }
+    figcaption {
+      text-align: center;
+      color: white;
+    }
+    .btn-link {
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,32 +1,47 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, Card, Row, Col, Container } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 import "./movie-card.scss";
 
 export class MovieCard extends React.Component {
+  addMovie(movie, user) {
+    const username = localStorage.getItem("user");
+    const token = localStorage.getItem("token");
+    console.log(movie);
+    console.log(token);
+
+    axios
+      .post(
+        `https://movieapishelf.herokuapp.com/users/${username}/movies/${movie._id}`,
+        {},
+        { headers: { Authorization: `Bearer ${token}` } }
+      )
+      .then((response) => {
+        this.setState({
+          user: response.data,
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
   render() {
-    const { movie, onMovieClick } = this.props;
+    const { movie, user } = this.props;
 
     return (
-      <Container>
-        <Row>
-          <Col></Col>
-          <Col>
-            <Card>
-              <Card.Img variant="top" src={movie.ImagePath} />
-              <Card.Body>
-                <Card.Title>{movie.Title}</Card.Title>
-                <Card.Text>{movie.Description}</Card.Text>
-                <Button onClick={() => onMovieClick(movie)} variant="link">
-                  Open
-                </Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col></Col>
-        </Row>
-      </Container>
+      <Card>
+        <Card.Img variant="top" src={movie.ImagePath} />
+        <Card.Body>
+          <Card.Title>{movie.Title}</Card.Title>
+          <Card.Text>{movie.Description}</Card.Text>
+          <Link to={`/movies/${movie._id}`}>
+            <Button variant="link">Open</Button>
+          </Link>
+        </Card.Body>
+      </Card>
     );
   }
 }
