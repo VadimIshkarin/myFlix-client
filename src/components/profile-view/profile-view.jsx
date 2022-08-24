@@ -4,9 +4,8 @@ import axios from "axios";
 import Link from "react-router-dom";
 
 import "./profile-view.scss";
-// import { FavoriteMoviesView } from "./favorite-movies";
 
-import { Container, Col, Row, Button, Card, Form } from "react-bootstrap";
+import { Container, Row, Button, Card, Form } from "react-bootstrap";
 
 export function ProfileView(props) {
   const [username, setUsername] = useState("");

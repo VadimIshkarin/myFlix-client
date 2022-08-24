@@ -22,4 +22,28 @@ html {
 
 
 
+.card-body figure {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body figure img {
+  height: 400px;
+  margin: auto;
+  display: block;
+}
+
+.card-body figure figcaption {
+  text-align: center;
+  color: #fff;
+}
+
+.card-body figure .btn-link {
+  margin-top: 20px;
+}
+
 /*# sourceMappingURL=index.ce1d6491.css.map */
