@@ -1,39 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, Card } from "react-bootstrap";
-import axios from "axios";
+
 import { Link } from "react-router-dom";
 
 import "./movie-card.scss";
 
 export class MovieCard extends React.Component {
-  addMovie(movie, user) {
-    const username = localStorage.getItem("user");
-    const token = localStorage.getItem("token");
-    console.log(movie);
-    console.log(token);
-
-    axios
-      .post(
-        `https://movieapishelf.herokuapp.com/users/${username}/movies/${movie._id}`,
-        {},
-        { headers: { Authorization: `Bearer ${token}` } }
-      )
-      .then((response) => {
-        this.setState({
-          user: response.data,
-        });
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
   render() {
     const { movie } = this.props;
-
     return (
       <Card className="movie-card">
-        <Card.Img variant="top" src={movie.ImagePath} />
+        <Card.Img className="card-img" variant="top" src={movie.ImagePath} />
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text className="description">{movie.Description}</Card.Text>

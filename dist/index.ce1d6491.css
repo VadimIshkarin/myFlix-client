@@ -14,9 +14,18 @@ html {
 
 
 
+.card-img {
+  width: 100px;
+  height: 270px;
+  object-fit: cover;
+}
 
-
-
+img {
+  max-width: 300px;
+  max-height: 350px;
+  height: auto;
+  margin: 10px auto;
+}
 
 
 
@@ -39,11 +48,25 @@ html {
 
 .card-body figure figcaption {
   text-align: center;
-  color: #fff;
+  color: #f6f2f2;
 }
 
 .card-body figure .btn-link {
   margin-top: 20px;
 }
+
+.main-nav {
+  background-color: #1ba098;
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+
+
+
 
 /*# sourceMappingURL=index.ce1d6491.css.map */

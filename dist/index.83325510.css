@@ -1,6 +1,7 @@
 .profile-view {
   margin-top: 30px;
 }
+
 .top-elements {
   width: 100%;
   max-width: 950px;
@@ -15,8 +16,7 @@
 .your-profile {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto 0;
 }
 
 .card-title {
@@ -28,17 +28,14 @@
   text-align: center;
 }
 
-.username,
-.email,
-.birthday {
+.username, .email, .birthday {
   font-weight: bold;
 }
 
 .update-profile {
   width: 100%;
   max-width: 800px;
-  margin: 0 auto;
-  margin-top: 30px;
+  margin: 30px auto 0;
 }
 
 .update-title {
@@ -51,9 +48,9 @@
 }
 
 .favorite-Movies-title {
-  margin-top: 30px;
   text-align: center;
-  color: black;
+  color: #000;
+  margin-top: 30px;
 }
 
 .favoriteMoviediv {
@@ -62,9 +59,59 @@
 
 .favoriteMovied-col {
   text-align: center;
-  margin: 0 auto;
   width: 100%;
+  margin: 0 auto;
 }
+
 .favoriteMovieButton {
   margin-top: 10px;
 }
+
+.card-img {
+  width: 100px;
+  height: 270px;
+  object-fit: cover;
+}
+
+
+
+img {
+  max-width: 230px;
+  max-height: 450px;
+  height: auto;
+  margin: 10px auto;
+}
+
+
+
+.main-nav {
+  background-color: #1ba098;
+  margin-bottom: 60px;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+
+
+
+
+
+
+html {
+  background-color: #f8f7f7;
+  font-size: 1.3rem;
+}
+
+.app-container {
+  color: #101311;
+  background-color: #fff;
+}
+
+.btn.btn-primary {
+  background-color: #04837b;
+}
+
+/*# sourceMappingURL=index.83325510.css.map */

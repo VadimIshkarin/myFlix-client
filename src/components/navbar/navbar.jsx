@@ -30,7 +30,11 @@ export function Menu({ user }) {
           {isAuth() && <Nav.Link href="/">Home</Nav.Link>}
           {isAuth() && <Nav.Link href={`/users/${user}`}>{user}</Nav.Link>}
 
-          {isAuth() && <Button onClick={onLoggedOut}>Logout</Button>}
+          {isAuth() && (
+            <Button variant="danger" onClick={onLoggedOut}>
+              Logout
+            </Button>
+          )}
           {!isAuth() && <Nav.Link href="/">Sign-in</Nav.Link>}
           {!isAuth() && <Nav.Link href="/register">Sign-up</Nav.Link>}
         </Nav>
