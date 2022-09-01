@@ -66,7 +66,13 @@ export class MovieView extends React.Component {
                   Add to favorite movies
                 </Button>
               ) : (
-                <div>My favorite movie</div>
+                <Button
+                  className="my-4 ml-2"
+                  variant="outline-primary"
+                  onClick={() => handleFavorite(movie._id, "add")}
+                >
+                  Added to your favorite movie list
+                </Button>
               )}
             </div>
           </Col>

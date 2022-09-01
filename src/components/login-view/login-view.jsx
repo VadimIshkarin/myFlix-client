@@ -2,17 +2,16 @@ import React, { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { Form, Button } from "react-bootstrap";
-
 import "./login-view.scss";
 
 export function LoginView(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   // Declare hook for each input
-  const [usernameErr, setUsernameErr] = useState("");
-  const [passwordErr, setPasswordErr] = useState("");
+  const [setUsernameErr] = useState("");
+  const [setPasswordErr] = useState("");
 
-  // validate user inputs
+  // // validate user inputs
   const validate = () => {
     let isReq = true;
     if (!username) {
@@ -74,7 +73,7 @@ export function LoginView(props) {
           onChange={(e) => setPassword(e.target.value)}
           required
           minLength="8"
-          placeholder=""
+          placeholder="Enter a password"
         />
       </Form.Group>
 

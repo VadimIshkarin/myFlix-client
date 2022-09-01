@@ -209,6 +209,8 @@ export class ProfileView extends React.Component {
           </Col>
         </Row>
 
+        {/* UPDATE ACCOUNT */}
+
         <Row>
           <Col>
             <Card className="update-profile">
@@ -228,7 +230,7 @@ export class ProfileView extends React.Component {
                     <Form.Control
                       type="text"
                       name="Username:"
-                      placeholder="New Username"
+                      placeholder="New Username must be at least 5 characters long"
                       onChange={(e) => this.setUsername(e.target.value)}
                       required
                     />
@@ -239,7 +241,7 @@ export class ProfileView extends React.Component {
                     <Form.Control
                       type="password"
                       name="Password:"
-                      placeholder="New Password"
+                      placeholder="New Password must be at least 8 characters"
                       onChange={(e) => this.setPassword(e.target.value)}
                       required
                     />
@@ -274,6 +276,8 @@ export class ProfileView extends React.Component {
             </Card>
           </Col>
         </Row>
+
+        {/* FAVORITE MOVIES */}
 
         <div>
           <h3 className="favorite-Movies-title">My Favorite Movies:</h3>
