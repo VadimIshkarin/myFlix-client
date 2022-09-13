@@ -1,11 +1,15 @@
 import React from "react";
 import axios from "axios";
-import PropTypes from "prop-types";
+
+import { connect } from "react-redux";
 
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { ProfileView } from "../profile-view/profile-view";
-import { LoginView } from "../login-view/login-view";
-import { MovieCard } from "../movie-card/movie-card";
+import { setMovies, setFilter } from "../../actions/actions";
+
+import MoviesList from "../movies-list/movies-list";
+import ProfileView from "../profile-view/profile-view";
+import LoginView from "../login-view/login-view";
+// import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { RegistrationView } from "../registration-view/registration-view";
 import { Menu } from "../navbar/navbar";
@@ -15,31 +19,14 @@ import { Row, Col, Container } from "react-bootstrap";
 
 import "./main-view.scss";
 
-export class MainView extends React.Component {
+class MainView extends React.Component {
   constructor() {
     super();
     this.state = {
-      movies: [],
-      user: null,
       favoriteMovies: [],
+      user: null,
     };
   }
-
-  getMovies(token) {
-    axios
-      .get("https://movieapishelf.herokuapp.com/movies", {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((response) => {
-        this.setState({
-          movies: response.data,
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
   componentDidMount() {
     let accessToken = localStorage.getItem("token");
     if (accessToken !== null) {
@@ -48,6 +35,19 @@ export class MainView extends React.Component {
       });
       this.getMovies(accessToken);
     }
+  }
+
+  getMovies(token) {
+    axios
+      .get("https://movieapishelf.herokuapp.com/movies", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
+        this.props.setMovies(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   handleFavorite = (movieId, action) => {
@@ -115,7 +115,9 @@ export class MainView extends React.Component {
   }
 
   render() {
-    const { movies, user, favoriteMovies } = this.state;
+    let { movies } = this.props;
+    let { user } = this.state;
+    let { favoriteMovies } = this.state;
 
     return (
       <Router>
@@ -133,11 +135,7 @@ export class MainView extends React.Component {
                     </Col>
                   );
                 if (movies.length === 0) return <div className="main-view" />;
-                return movies.map((m) => (
-                  <MovieCard key={m._id} movie={m}>
-                    {m.title}
-                  </MovieCard>
-                ));
+                return <MoviesList movies={movies} />;
               }}
             />
 
@@ -169,21 +167,6 @@ export class MainView extends React.Component {
                 );
               }}
             />
-
-            {/* <Route
-              path={`/profile-view/${user}`}
-              render={({ history }) => {
-                if (!user) return <Redirect to="/" />;
-                return (
-                  <Col>
-                    <EditUser
-                      user={user}
-                      onBackClick={() => history.goBack()}
-                    />
-                  </Col>
-                );
-              }}
-            /> */}
 
             <Route
               path="/movies/:movieId"
@@ -261,20 +244,7 @@ export class MainView extends React.Component {
     );
   }
 }
-
-MovieCard.propTypes = {
-  movie: PropTypes.shape({
-    Title: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired,
-    ImagePath: PropTypes.string.isRequired,
-    Genre: PropTypes.shape({
-      Name: PropTypes.string.isRequired,
-      Description: PropTypes.string.isRequired,
-    }),
-    Director: PropTypes.shape({
-      Name: PropTypes.string.isRequired,
-      Bio: PropTypes.string.isRequired,
-      Birthday: PropTypes.string.isRequired,
-    }),
-  }).isRequired,
+let mapStateToProps = (state) => {
+  return { movies: state.movies };
 };
+export default connect(mapStateToProps, { setMovies, setFilter })(MainView);

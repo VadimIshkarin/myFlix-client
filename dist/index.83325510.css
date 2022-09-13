@@ -24,6 +24,15 @@
   font-weight: bold;
 }
 
+.card-text {
+  text-align: left;
+}
+
+.formDisplay {
+  text-align: left;
+  font-weight: bold;
+}
+
 .delete-profile-button {
   text-align: center;
 }
@@ -67,10 +76,18 @@
   margin-top: 10px;
 }
 
-.card-img {
-  width: 100px;
-  height: 270px;
-  object-fit: cover;
+.movie-card {
+  border: none;
+  box-shadow: 0 3px 8px #e0dbdb;
+}
+
+.movie-card:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(1.02);
+}
+
+.card-body {
+  text-align: center;
 }
 
 
@@ -92,6 +109,10 @@ img {
 
 .nav-link {
   color: #fff;
+}
+
+.text-light, .ml-auto {
+  font-weight: bold;
 }
 
 
