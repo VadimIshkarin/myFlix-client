@@ -18,7 +18,6 @@
   "homepage": "https://github.com/VadimIshkarin/myFlix-client#readme",
   "dependencies": {
     "axios": "^0.27.2",
-    "chalk": "^5.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
