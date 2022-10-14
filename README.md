@@ -1,5 +1,11 @@
 # MyFlixDB
 
+### Screenshot of the app:
+
+  <img src="/img/myflixdb.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
+
+  <img src="/img/myflixdb1.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
+
 ## Overview
 
 This is a client-side of a movie database App called MyFlixDB which fetches data from its server-side
@@ -68,9 +74,5 @@ A user need to first create an account (to register ) to access the full feature
 - Axios
 - Prop-types
 - Redux-devtools-extension
-
-### Screenshot of the app:
-
-  <img src="/img/myflixdb.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
 
 ---
