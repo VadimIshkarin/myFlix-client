@@ -1,18 +1,26 @@
 # MyFlixDB
 
-### Screenshot of the app:
+### Screenshots of the app:
 
-### Main view
+### Main view:
 
   <img src="/img/myflixdb.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
 
-### Single Movie view
+### Single Movie view:
 
   <img src="/img/myflixdb1.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
 
-### Profile view (and list of added favorite movies)
+### Profile view (and list of added favorite movies):
 
   <img src="/img/myflixdb2.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
+
+### Login view:
+
+  <img src="/img/myflixdblogin.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
+
+### Registration view:
+
+  <img src="/img/myflixdbreg.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
 
 ## Overview
 
