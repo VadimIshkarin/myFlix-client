@@ -2,9 +2,17 @@
 
 ### Screenshot of the app:
 
+### Main view
+
   <img src="/img/myflixdb.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
 
+### Single Movie view
+
   <img src="/img/myflixdb1.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
+
+### Profile view (and list of added favorite movies)
+
+  <img src="/img/myflixdb2.png" alt="Alt text" style="display: inline-block; margin: 0 auto; max-width: 800px">
 
 ## Overview
 
