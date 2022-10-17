@@ -4,3 +4,4 @@ node_modules
 
 # Other files
 .DS_Store
+dist

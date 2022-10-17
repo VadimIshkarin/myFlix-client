@@ -49096,6 +49096,7 @@ parcelHelpers.export(exports, "Menu", ()=>Menu);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+// import { Menu } from "react-bootstrap";
 var _reactBootstrap = require("react-bootstrap");
 var _navbarScss = require("./navbar.scss");
 function Menu({ user  }) {
@@ -49191,7 +49192,7 @@ function Menu({ user  }) {
         columnNumber: 5
     }, this);
 }
-_c = (0, _reactBootstrap.Menu);
+_c = Menu;
 var _c;
 $RefreshReg$(_c, "Menu");
 
