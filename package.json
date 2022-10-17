@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel src/index.html",
     "predeploy": "rm -rf dist && parcel build index.html",
     "deploy": "gh-pages -d dist"
   },
