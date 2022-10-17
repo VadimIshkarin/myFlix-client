@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/VadimIshkarin/myFlix-client#readme",
   "dependencies": {
+    "ansi-styles": "^6.2.1",
     "axios": "^0.27.2",
     "chalk": "^2.4.2",
     "prop-types": "^15.8.1",
