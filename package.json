@@ -2,10 +2,11 @@
   "name": "myflix-client",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/index.html",
   "scripts": {
-    "start": "parcel src/index.html --out-dir docs",
-    "build": "parcel build src/index.html --public-url ./"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
