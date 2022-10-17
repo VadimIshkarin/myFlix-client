@@ -7,7 +7,7 @@
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "rm -rf dist && parcel build index.html --public-url https://VadimIshkarin.github.io/myFlix-client",
+    "predeploy": "rm -rf dist && parcel build --public-url https://VadimIshkarin.github.io/myFlix-client",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
