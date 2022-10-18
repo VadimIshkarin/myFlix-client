@@ -24,10 +24,7 @@
 
 ## Overview
 
-This is a client-side of a movie database App called MyFlixDB which fetches data from its server-side
-(movie-API). It allows users to search for and save information about different movies, directors. It allows users to search for and save information about different movies, directors,
-and genres. Users will also be able to register, update their personal information, and create a list of
-their favorite movies.
+This is a client-side of a movie database app called MyFlixDB. It fetches data from its server-side (movie-API). It allows users to search for and save information about different movies, directors, and genres. Users will also be able to register, update their personal information, and create a list of their favorite movies.
 
 A user need to first create an account (to register ) to access the full features of the app.
 
