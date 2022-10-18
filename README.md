@@ -88,4 +88,8 @@ A user needs to create an account to register/to access the full features of MyF
 - Prop-types
 - Redux-devtools-extension
 
----
+# Link
+
+### MyFlixDB app:
+
+https://VadimIshkarin.github.io/myFlix-client
