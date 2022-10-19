@@ -1,6 +1,7 @@
 import React from "react";
 // import { Menu } from "react-bootstrap";
 import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import "./navbar.scss";
 
@@ -31,9 +32,11 @@ export function Menu({ user }) {
           {isAuth() && <Nav.Link href={`/users/${user}`}>{user}</Nav.Link>}
 
           {isAuth() && (
-            <Button variant="danger" onClick={onLoggedOut}>
-              Logout
-            </Button>
+            <Link to="/">
+              <Button variant="danger" onClick={onLoggedOut}>
+                Logout
+              </Button>
+            </Link>
           )}
           {!isAuth() && <Nav.Link href="/">Sign-in</Nav.Link>}
           {!isAuth() && <Nav.Link href="/register">Sign-up</Nav.Link>}
