@@ -42539,7 +42539,7 @@ function LoginView(props) {
                 children: "Login to MyFlixDB"
             }, void 0, false, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 57,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
@@ -42550,7 +42550,7 @@ function LoginView(props) {
                         children: "Username:"
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 59,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -42561,13 +42561,13 @@ function LoginView(props) {
                         placeholder: "Enter a username"
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 60,
+                        lineNumber: 59,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 58,
+                lineNumber: 57,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Group, {
@@ -42577,7 +42577,7 @@ function LoginView(props) {
                         children: "Password:"
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 70,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Form).Control, {
@@ -42589,13 +42589,13 @@ function LoginView(props) {
                         placeholder: "Enter a password"
                     }, void 0, false, {
                         fileName: "src/components/login-view/login-view.jsx",
-                        lineNumber: 71,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 69,
+                lineNumber: 68,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
@@ -42605,13 +42605,13 @@ function LoginView(props) {
                 children: "Submit"
             }, void 0, false, {
                 fileName: "src/components/login-view/login-view.jsx",
-                lineNumber: 81,
+                lineNumber: 80,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/login-view/login-view.jsx",
-        lineNumber: 56,
+        lineNumber: 55,
         columnNumber: 5
     }, this);
 }
@@ -43124,6 +43124,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 // import { Menu } from "react-bootstrap";
 var _reactBootstrap = require("react-bootstrap");
+var _reactRouterDom = require("react-router-dom");
 var _navbarScss = require("./navbar.scss");
 function Menu({ user  }) {
     const onLoggedOut = ()=>{
@@ -43144,14 +43145,14 @@ function Menu({ user  }) {
                 children: "MyFlixDB"
             }, void 0, false, {
                 fileName: "src/components/navbar/navbar.jsx",
-                lineNumber: 26,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
                 "aria-controls": "basic-navbar-nav"
             }, void 0, false, {
                 fileName: "src/components/navbar/navbar.jsx",
-                lineNumber: 27,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Collapse, {
@@ -43164,7 +43165,7 @@ function Menu({ user  }) {
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 30,
+                            lineNumber: 31,
                             columnNumber: 24
                         }, this),
                         isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -43172,16 +43173,23 @@ function Menu({ user  }) {
                             children: user
                         }, void 0, false, {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 31,
+                            lineNumber: 32,
                             columnNumber: 24
                         }, this),
-                        isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
-                            variant: "danger",
-                            onClick: onLoggedOut,
-                            children: "Logout"
+                        isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+                                variant: "danger",
+                                onClick: onLoggedOut,
+                                children: "Logout"
+                            }, void 0, false, {
+                                fileName: "src/components/navbar/navbar.jsx",
+                                lineNumber: 36,
+                                columnNumber: 15
+                            }, this)
                         }, void 0, false, {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 34,
+                            lineNumber: 35,
                             columnNumber: 13
                         }, this),
                         !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -43189,7 +43197,7 @@ function Menu({ user  }) {
                             children: "Sign-in"
                         }, void 0, false, {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 38,
+                            lineNumber: 41,
                             columnNumber: 25
                         }, this),
                         !isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -43197,24 +43205,24 @@ function Menu({ user  }) {
                             children: "Sign-up"
                         }, void 0, false, {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 39,
+                            lineNumber: 42,
                             columnNumber: 25
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/navbar/navbar.jsx",
-                    lineNumber: 29,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/navbar/navbar.jsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/navbar/navbar.jsx",
-        lineNumber: 25,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
@@ -43227,7 +43235,7 @@ $RefreshReg$(_c, "Menu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","./navbar.scss":"8wkoA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8wkoA":[function() {},{}],"4tuA0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","react-router-dom":"cHIiW","./navbar.scss":"8wkoA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8wkoA":[function() {},{}],"4tuA0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$377f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
