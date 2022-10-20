@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import "./login-view.scss";
 
@@ -76,14 +77,14 @@ export function LoginView(props) {
           placeholder="Enter a password"
         />
       </Form.Group>
-
-      <Button className="mt-4" type="submit" onClick={handleSubmit}>
-        Submit
-      </Button>
+      <Link to="/">
+        <Button className="mt-4" type="submit" onClick={handleSubmit}>
+          Submit
+        </Button>
+      </Link>
     </Form>
   );
 }
-
 // LoginView.PropTypes = {
 //   user: PropTypes.shape({
 //     username: PropTypes.string.isRequired,
