@@ -42598,7 +42598,7 @@ function LoginView(props) {
                 lineNumber: 68,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 className: "mt-4",
                 type: "submit",
                 onClick: handleSubmit1,
