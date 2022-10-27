@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VadimIshkarin/myFlix-client.git"
+    "url": "git+https://github.com/vadimishkarin/myFlix-client.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VadimIshkarin/myFlix-client/issues"
+    "url": "https://github.com/vadimishkarin/myFlix-client/issues"
   },
-  "homepage": "https://VadimIshkarin.github.io/myFlix-client",
+  "homepage": "https://vadimishkarin.github.io/myFlix-client",
   "dependencies": {
     "ansi-styles": "^6.2.1",
     "axios": "^0.27.2",

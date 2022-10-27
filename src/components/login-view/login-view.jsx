@@ -76,9 +76,9 @@ export function LoginView(props) {
           placeholder="Enter a password"
         />
       </Form.Group>
-      <Button className="mt-4" type="submit" onClick={handleSubmit}>
+      <button className="mt-4" type="submit" onClick={handleSubmit}>
         Submit
-      </Button>
+      </button>
     </Form>
   );
 }
