@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import "./login-view.scss";
 
@@ -76,9 +76,10 @@ export function LoginView(props) {
           placeholder="Enter a password"
         />
       </Form.Group>
-      <button className="mt-4" type="submit" onClick={handleSubmit}>
+
+      <Button className="mt-4" type="submit" onClick={handleSubmit}>
         Submit
-      </button>
+      </Button>
     </Form>
   );
 }
