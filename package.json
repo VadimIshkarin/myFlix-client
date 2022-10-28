@@ -8,7 +8,7 @@
     "build": "parcel build src/index.html --public-url ./",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
-    "outputPath": "dist/"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
