@@ -92,4 +92,4 @@ A user needs to create an account to register/to access the full features of MyF
 
 ### MyFlixDB app:
 
-https://VadimIshkarin.github.io/myFlix-client
+https://myflix-client-54gsbvbc2-vadimishkarin.vercel.app/
