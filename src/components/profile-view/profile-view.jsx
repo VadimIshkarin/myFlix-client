@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import axios from "axios";
 import "./profile-view.scss";
 import { MovieCard } from "../movie-card/movie-card";
+import { Link } from "react-router-dom";
 
 export class ProfileView extends React.Component {
   constructor() {
@@ -286,14 +287,15 @@ export class ProfileView extends React.Component {
             <Col sm={6} md={4} lg={4} key={movie._id}>
               <div className="favoriteMoviediv">
                 <MovieCard movie={movie} />
-
-                <Button
-                  className="my-4 ml-2"
-                  variant="danger"
-                  onClick={() => handleFavorite(movie._id, "remove")}
-                >
-                  Remove
-                </Button>
+                <Link to="/">
+                  <Button
+                    className="my-4 ml-2"
+                    variant="danger"
+                    onClick={() => handleFavorite(movie._id, "remove")}
+                  >
+                    Remove
+                  </Button>
+                </Link>
               </div>
             </Col>
           ))}
