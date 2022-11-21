@@ -28,8 +28,16 @@ export function Menu({ user }) {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          {isAuth() && <Nav.Link href="/">Home</Nav.Link>}
-          {isAuth() && <Nav.Link href={`/users/${user}`}>{user}</Nav.Link>}
+          {isAuth() && (
+            <Link className="nav-link mr-2" to="/">
+              Home
+            </Link>
+          )}
+          {isAuth() && (
+            <Link className="nav-link mr-2" to={`/users/${user}`}>
+              Profile
+            </Link>
+          )}
 
           {isAuth() && (
             <Link to="/">
